@@ -17,7 +17,7 @@ class Paginator {
      * Paginate
      */
     paginate () {
-
+        return paginator.bind(this)(...arguments);
     }
     
 }
