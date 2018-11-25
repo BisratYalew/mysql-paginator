@@ -31,16 +31,20 @@ const paginator = async function paginateData(table_name, query, opts) {
     knex(table_name).count(`${firstQueryParam} as num`).then((result) => {   
         let paginationData = preparePaginationValues(Number(opts.per_page), Number(opts.page), result[0].num);
         knex(table_name).select().where(query).limit(paginationData.start_limit)
-            .then((result) => {
-            let docs = {
-            total_pages: paginationData.total_pages,
-            total_docs: paginationData.total_docs,
-            page: paginationData.page,
-            per_page: paginationData.per_page,
-            docs: result
-          }
-          console.log(docs);
-          return docs;
+            .then(async (result) => {
+                var data = {};
+                await paginationData.then(function (value) {
+                    data = value;
+                })
+
+                let docs = {
+                    total_pages: data.total_pages,
+                    total_docs: data.total_docs,
+                    page: data.page > 1 ? data.page - 1 : data.page,
+                    per_page: data.per_page,
+                    docs: result
+                }    
+            return docs;
         });
     })
 }
@@ -88,4 +92,9 @@ const preparePaginationValues = async (per_page, page, total_docs) => {
     }
   
     return pagination_data;
+}
+
+
+module.exports = {
+    paginator, preparePaginationValues
 }
