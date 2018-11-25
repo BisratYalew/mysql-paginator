@@ -1,3 +1,5 @@
+const knex      = require('knex');
+
 /**
  * Paginate Data from Mysql/Maria Databases.  
  * @name Paginate Data
