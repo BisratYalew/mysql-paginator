@@ -1,3 +1,5 @@
+const _     = require('lodash');
+
 class Paginator {
 
     constructor(dbConfig= {}){

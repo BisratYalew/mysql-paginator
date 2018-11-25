@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/bisratyalew/mysql-paginator/issues"
   },
-  "homepage": "https://github.com/bisratyalew/mysql-paginator#readme"
+  "homepage": "https://github.com/bisratyalew/mysql-paginator#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
 }
