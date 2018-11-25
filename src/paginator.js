@@ -23,6 +23,13 @@ const paginator = async function paginateData(table_name, query, opts) {
 
     knex = await knex(dbConfig);
 
+    var firstQueryParam;
+
+
+    knex(table_name).count(`${firstQueryParam} as num`).then((result) => {   
+        
+    })
+
 }
 
 
@@ -36,6 +43,7 @@ const paginator = async function paginateData(table_name, query, opts) {
  * @param  {String} total_docs  Number of total documents found on the db
  */
 const preparePaginationValues = async (per_page, page, total_docs) => {
+    
     var total_pages = total_docs/per_page;
 
     
