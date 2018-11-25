@@ -18,3 +18,5 @@ class Paginator {
     }
     
 }
+
+module.exports = Paginator;
