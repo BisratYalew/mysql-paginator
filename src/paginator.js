@@ -1,0 +1,1 @@
+const paginator = async function paginateData(table_name, query, opts) {}
