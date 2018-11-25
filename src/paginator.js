@@ -26,10 +26,19 @@ const paginator = async function paginateData(table_name, query, opts) {
     var firstQueryParam;
 
 
-    knex(table_name).count(`${firstQueryParam} as num`).then((result) => {   
-        
-    })
+    var firstQueryParam;
+    if(query.length) firstQueryParam = String(query[Object.keys(query)[0]]);
+    else firstQueryParam = 'id';
 
+    knex(table_name).count(`${firstQueryParam} as num`).then((result) => {   
+        let paginationData = preparePaginationValues(Number(opts.per_page), Number(opts.page), result[0].num);
+        knex(table_name).select().where(query).limit(paginationData.start_limit)
+            .then((result) => {
+            let docs = paginationData;
+            docs.data = result;
+            return docs;
+        });
+    })
 }
 
 
