@@ -1,0 +1,29 @@
+{
+  "name": "mysql-paginator",
+  "version": "0.0.1",
+  "description": "Document Query Paginator for MySQL and MariaDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bisratyalew/mysql-paginator.git"
+  },
+  "keywords": [
+    "mysql",
+    "mysql-paginator",
+    "mariadb",
+    "mariadb-paginator",
+    "pagination",
+    "paginator",
+    "nodejs",
+    "query-paginator"
+  ],
+  "author": "Bisrat Yalew <bisratyalew10@gmail.com> (https://t.me/bisratyalew)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bisratyalew/mysql-paginator/issues"
+  },
+  "homepage": "https://github.com/bisratyalew/mysql-paginator#readme"
+}
