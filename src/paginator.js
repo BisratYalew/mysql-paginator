@@ -25,8 +25,6 @@ const paginator = async function paginateData(table_name, query, opts) {
 
     var firstQueryParam;
 
-
-    var firstQueryParam;
     if(query.length) firstQueryParam = String(query[Object.keys(query)[0]]);
     else firstQueryParam = 'id';
 
@@ -34,9 +32,15 @@ const paginator = async function paginateData(table_name, query, opts) {
         let paginationData = preparePaginationValues(Number(opts.per_page), Number(opts.page), result[0].num);
         knex(table_name).select().where(query).limit(paginationData.start_limit)
             .then((result) => {
-            let docs = paginationData;
-            docs.data = result;
-            return docs;
+            let docs = {
+            total_pages: paginationData.total_pages,
+            total_docs: paginationData.total_docs,
+            page: paginationData.page,
+            per_page: paginationData.per_page,
+            docs: result
+          }
+          console.log(docs);
+          return docs;
         });
     })
 }
