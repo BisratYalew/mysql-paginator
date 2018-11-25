@@ -2,6 +2,7 @@ const knex      = require('knex');
 
 /**
  * Paginate Data from Mysql/Maria Databases.  
+ * 
  * @name Paginate Data
  * @function
  * @param  {String} table_name  Table name to paginate data
@@ -24,6 +25,16 @@ const paginator = async function paginateData(table_name, query, opts) {
 
 }
 
+
+/**
+ * Prepare Pagination Limit, Offset and other values 
+ * 
+ * @name Paginate Data
+ * @function
+ * @param  {String} per_page    Number of data to get per page
+ * @param  {String} page        Page Number to show data
+ * @param  {String} total_docs  Number of total documents found on the db
+ */
 const preparePaginationValues = async (per_page, page, total_docs) => {
     var total_pages = total_docs/per_page;
 
