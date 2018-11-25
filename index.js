@@ -1,4 +1,6 @@
-const _     = require('lodash');
+const _            = require('lodash');
+
+const paginator    = require('./src/paginator');
 
 class Paginator {
 
@@ -9,6 +11,7 @@ class Paginator {
             this.dbConfig = _.pick(dbConfig, 'host', 'database', 'user', 'client', 'config', 'password');
         }
     };
+
     
     /**
      * Paginate
