@@ -31,7 +31,7 @@ const paginator = new Paginator({
 );
 ```
 
-### const paginator = new Paginator([table_name], [query], [options], [callback]);
+### paginator.paginate([table_name], [query], [options], [callback]);
 
 **Parameters**
 
