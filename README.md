@@ -21,6 +21,14 @@ npm install mysql-paginator
 
 ```js
 const Paginator = require('mysql-paginator');
+
+const paginator = new Paginator({
+    database: [database]
+    host : [host-name],
+    user : [username]
+    password : [password]
+  }    
+);
 ```
 
 ### const paginator = new Paginator([table_name], [query], [options], [callback]);
@@ -48,7 +56,7 @@ Promise fulfilled with object having properties:
 #### Return 20 documents per page at page 1
 
 ```js
-const paginator = new Paginator('user', { user: 'something' }, { 
+paginator.paginate('user', { user: 'something' }, { 
   per_page: 20, 
   page: 1  
 }, (err, result) => {
@@ -57,7 +65,7 @@ const paginator = new Paginator('user', { user: 'something' }, {
   // result.page
   // result.per_page
   // result.docs  
-});;
+});
 ```
 
 ## Tests
