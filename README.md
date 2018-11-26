@@ -1,7 +1,7 @@
 
 # mysql-paginator
 
-> Document Query Paginator for  [Mysql](https://mysql.org) and [MariaDB](http://mariadb.org)
+> Document Query Paginator for  [Mysql](https://www.mysql.com) and [MariaDB](http://mariadb.org)
 
 [![NPM version](https://img.shields.io/npm/v/mysql-paginator.svg)](https://npmjs.org/package/mysql-paginator)
 
