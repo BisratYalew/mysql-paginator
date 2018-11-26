@@ -71,7 +71,6 @@ paginator.paginate('user', { user: 'something' }, {
 ## Tests
 
 ```sh
-npm install
 npm run test
 ```
 
