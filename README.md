@@ -22,9 +22,9 @@ npm install mysql-paginator
 const Paginator = require('mysql-paginator');
 
 const paginator = new Paginator({
-    database: [database]
+    database: [database],
     host : [host-name],
-    user : [username]
+    user : [username],
     password : [password]
   }    
 );
