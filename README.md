@@ -4,7 +4,6 @@
 > Document Query Paginator for  [Mysql](https://mysql.org) and [MariaDB](http://mariadb.org)
 
 [![NPM version](https://img.shields.io/npm/v/mysql-paginator.svg)](https://npmjs.org/package/mysql-paginator)
-[![Build status](https://img.shields.io/travis/bisratyalew/mysql-paginator.svg)]
 
 **Note:** This library will only work with Node.js >= 4.2
 =======
