@@ -34,6 +34,7 @@ const paginator = new Paginator({
 
 **Parameters**
 
+* `[table_name]` {String} - Table name to select data
 * `[query]` {Object} - Query criteria.
 * `[options]` {Object}
   - `[per_page]` {Object | String} - Data's to return per page 
