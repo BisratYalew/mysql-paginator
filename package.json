@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Document Query Paginator for MySQL and MariaDB",
   "main": "index.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "scripts": {
     "test": "npm run test"
   },
