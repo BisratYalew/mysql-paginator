@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/bisratyalew/mysql-paginator#readme",
   "dependencies": {
-    "knex": "^0.15.2",
+    "knex": "^0.19.5",
     "lodash": "^4.17.11"
   }
 }
